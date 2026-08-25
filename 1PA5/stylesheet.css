@@ -1,0 +1,110 @@
+@property --arena{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #7b7860;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+nav{
+    background-color: var(--arena);
+    padding:30px;
+    text-align: center;
+}
+.navbar-item{
+    color:rgb(174, 162, 162);
+    text-decoration:none;
+    margin-right: 40px;
+}
+.navbar-item:hover{
+    color:brown;
+    font-weight: bold;
+}
+
+header{
+    background-image: url(ChatGPT\ Image\ 25\ ago\ 2026\,\ 12_50_18\ p.m..png);
+    background-size: cover;
+    background-position: center;
+    color:var(--beige);
+}
+h1{
+    color:rgb(195, 173, 149)
+}
+
+header>div{
+    padding: 300px 300px 300px 100px;
+}
+
+.button{
+    padding: 10px;
+    background-color: rgb(224, 218, 201);
+    display:inline-block;
+    color:var(--arena);
+    margin: 15px 0 15px;
+    
+}
+.button:hover{
+background-color: rgb(181, 135, 87);
+color:rgb(143, 139, 122);
+cursor:pointer;
+}
+
+#section1{
+background-color: bisque;
+text-align: left;
+}
+
+#img-cafe{
+    width: 550px;
+}
+section,footer{
+    padding:40px;
+}
+
+h2{
+    font-size: 48;
+    line-height: 70px;
+    color:rgb(162, 130, 90)
+}
+
+#section1 p{
+    width: 50%;
+}
+#sct1-text{
+    padding-left:100px;
+}
+#section2{
+    text-align: center;
+}
+
+#section2 table{
+    margin: auto;
+    margin-top: 25px;
+    padding: 20px;
+}
+#section2 td,th{
+    padding:10px;
+}
+
+#section2 th{
+background-color: rgb(161, 174, 117);
+color:beige
+}
+
+section2 td{
+    border-bottom: 1px dotted papayawhip;
+}
+
+footer{
+    background-color: rgb(128, 108, 85);
+    color:beige;
+}
+ footer table{
+    width: 100%;
+ }
+#contacto{
+text-align: right;
+}
