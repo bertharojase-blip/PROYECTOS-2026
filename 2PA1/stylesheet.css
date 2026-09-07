@@ -1,0 +1,72 @@
+/* combinador descendiente 
+div p{
+    background-color: aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}*/
+
+div > p{
+    background-color: beige;
+    padding: 2px;
+    border: 1px dashed black
+}
+/* combinadoe siguienre hermano */
+
+div + p{
+    background-color: coral;
+    color: cornsilk;
+    font-size: 24px;
+}
+
+div ~ p{
+    background-color: rgb(231, 94, 122);
+    color: white;
+}
+
+.link:hover{
+    color: rgb(154, 84, 220);
+}
+
+.link:link{
+    color:rgb(238, 127, 255)
+}
+
+.link:focus{
+    font-size: bold;
+}
+
+.link:active{
+    color: rgb(131, 181, 181);
+}
+
+.link:visited{
+    color: rgb(14, 140, 121);
+}
+
+#lorem::first-line{
+font-weight: bold;
+background-color: rgb(250, 188, 188);
+color: rgb(161, 69, 69);
+}
+
+#lorem::first-letter{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+div::before{
+    content: "⭐️🌷🍄🧚🏻‍♀️"
+}
+
+DIV::after{
+    content: BBBBBBBBBB
+}
+
+::marker{
+    color: red;
+}
+
+::selection{
+    background-color: aqua;
+    color: hotpink;
+}
