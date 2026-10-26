@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOMA | Matcha & Momentos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-contenido">
+      <a href="#inicio" class="logo">
+        SOMA <span>🍵</span>
+      </a>
+      <div class="perfil">B</div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="bienvenida">
+      <h1>Hola, bienvenido a <span>SOMA</span></h1>
+      <p>Tu momento matcha, a un toque de distancia.</p>
+
+      <div class="banner">
+        <img
+          src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=1000"
+          alt="Matcha preparado"
+        >
+        <div class="banner-texto">
+          Matcha ceremonial, recién preparado.
+        </div>
+      </div>
+    </section>
+
+    <section class="bebidas" id="bebidas">
+      <h2>Nuestras bebidas</h2>
+
+      <div class="lista-bebidas">
+
+        <article class="bebida">
+          <div class="bebida-imagen">
+            <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400" alt="Matcha Latte">
+          </div>
+
+          <div class="bebida-info">
+            <h3>Matcha Latte</h3>
+            <p>Cremoso, con leche texturizada, vainilla y matcha ceremonial.</p>
+            <strong>$75</strong>
+          </div>
+
+          <button class="agregar" data-id="0" aria-label="Agregar Matcha Latte">
+            ♧
+          </button>
+        </article>
+
+        <article class="bebida">
+          <div class="bebida-imagen">
+            <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400" alt="Matcha Helado">
+          </div>
+
+          <div class="bebida-info">
+            <h3>Matcha Helado</h3>
+            <p>Frío y refrescante, con hielo y leche de tu preferencia.</p>
+            <strong>$85</strong>
+          </div>
+
+          <button class="agregar" data-id="1" aria-label="Agregar Matcha Helado">
+            ♧
+          </button>
+        </article>
+
+        <article class="bebida">
+          <div class="bebida-imagen">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400" alt="Matcha Especial">
+          </div>
+
+          <div class="bebida-info">
+            <h3>Matcha Especial</h3>
+            <p>Batido con hielo, cremoso y bien verde.</p>
+            <strong>$95</strong>
+          </div>
+
+          <button class="agregar" data-id="2" aria-label="Agregar Matcha Especial">
+            ♧
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="pantalla-extra" id="club" hidden>
+      <h2>Club SOMA</h2>
+      <p>Tu espacio para disfrutar más momentos SOMA.</p>
+    </section>
+
+    <section class="pantalla-extra" id="qr" hidden>
+      <h2>Código QR</h2>
+      <p>Próximamente podrás consultar tu código SOMA aquí.</p>
+    </section>
+
+    <section class="carrito-pantalla" id="carrito" hidden>
+      <h2>Tu carrito</h2>
+      <p>Revisa tu pedido antes de confirmarlo.</p>
+
+      <div id="lista-carrito"></div>
+
+      <div class="resumen">
+        <div>
+          <span>Subtotal</span>
+          <span id="subtotal">$0</span>
+        </div>
+        <div class="total">
+          <strong>Total</strong>
+          <strong id="total">$0</strong>
+        </div>
+      </div>
+
+      <button class="boton-pedido" id="hacer-pedido">
+        Hacer pedido
+      </button>
+    </section>
+
+    <section class="exito" id="exito" hidden>
+      <div class="check">✓</div>
+      <h2>¡Compra exitosa!</h2>
+      <p>Your matcha is on its way.</p>
+      <p>THANK YOU FOR CHOOSING SOMA.</p>
+      <button class="boton-pedido" id="volver-inicio">
+        Volver al inicio
+      </button>
+    </section>
+
+  </main>
+
+  <nav class="navegacion">
+    <button class="nav-item activo" data-pantalla="inicio">
+      <span class="nav-icono">⌂</span>
+      <small>Inicio</small>
+    </button>
+
+    <button class="nav-item" data-pantalla="club">
+      <span class="nav-icono">♙</span>
+      <small>Club SOMA</small>
+    </button>
+
+    <button class="nav-item" data-pantalla="qr">
+      <span class="nav-icono">▦</span>
+      <small>Código QR</small>
+    </button>
+
+    <button class="nav-item" data-pantalla="carrito">
+      <span class="nav-icono">♧</span>
+      <small>Carrito <b id="contador"></b></small>
+    </button>
+  </nav>
+
+  <div class="modal-fondo" id="modal" hidden>
+    <div class="modal-producto">
+      <button class="cerrar" id="cerrar-modal">×</button>
+
+      <img id="modal-imagen" src="" alt="Bebida seleccionada">
+
+      <h2 id="modal-nombre"></h2>
+      <p id="modal-descripcion"></p>
+      <strong id="modal-precio"></strong>
+
+      <div class="modal-acciones">
+        <div class="cantidad">
+          <button id="menos">−</button>
+          <span id="cantidad">1</span>
+          <button id="mas">+</button>
+        </div>
+
+        <button class="boton-agregar" id="confirmar-agregar">
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const productos = [
+      {
+        nombre: "Matcha Latte",
+        descripcion: "Cremoso, con leche texturizada, vainilla y matcha ceremonial.",
+        precio: 75,
+        imagen: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=600"
+      },
+      {
+        nombre: "Matcha Helado",
+        descripcion: "Frío y refrescante, con hielo y leche de tu preferencia.",
+        precio: 85,
+        imagen: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600"
+      },
+      {
+        nombre: "Matcha Especial",
+        descripcion: "Batido con hielo, cremoso y bien verde.",
+        precio: 95,
+        imagen: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600"
+      }
+    ];
+
+    const carrito = {};
+    let seleccionado = 0;
+    let cantidad = 1;
+
+    const modal = document.getElementById("modal");
+
+    function abrirProducto(id) {
+      seleccionado = id;
+      cantidad = 1;
+      const producto = productos[id];
+
+      document.getElementById("modal-imagen").src = producto.imagen;
+      document.getElementById("modal-nombre").textContent = producto.nombre;
+      document.getElementById("modal-descripcion").textContent = producto.descripcion;
+      document.getElementById("modal-precio").textContent = "$" + producto.precio;
+      actualizarCantidad();
+
+      modal.hidden = false;
+    }
+
+    function actualizarCantidad() {
+      document.getElementById("cantidad").textContent = cantidad;
+      document.getElementById("confirmar-agregar").textContent =
+        "Agregar · $" + productos[seleccionado].precio * cantidad;
+    }
+
+    document.querySelectorAll(".agregar").forEach(boton => {
+      boton.addEventListener("click", () => {
+        abrirProducto(Number(boton.dataset.id));
+      });
+    });
+
+    document.getElementById("cerrar-modal").onclick = () => {
+      modal.hidden = true;
+    };
+
+    modal.addEventListener("click", evento => {
+      if (evento.target === modal) modal.hidden = true;
+    });
+
+    document.getElementById("menos").onclick = () => {
+      cantidad = Math.max(1, cantidad - 1);
+      actualizarCantidad();
+    };
+
+    document.getElementById("mas").onclick = () => {
+      cantidad++;
+      actualizarCantidad();
+    };
+
+    document.getElementById("confirmar-agregar").onclick = () => {
+      carrito[seleccionado] = (carrito[seleccionado] || 0) + cantidad;
+      modal.hidden = true;
+      actualizarCarrito();
+    };
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("lista-carrito");
+      lista.innerHTML = "";
+      let total = 0;
+      let contador = 0;
+
+      Object.keys(carrito).forEach(id => {
+        const unidades = carrito[id];
+        if (unidades <= 0) return;
+
+        const producto = productos[id];
+        const precio = producto.precio * unidades;
+        total += precio;
+        contador += unidades;
+
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "item-carrito";
+
+        const foto = document.createElement("img");
+        foto.src = producto.imagen;
+        foto.alt = producto.nombre;
+
+        const info = document.createElement("div");
+        info.className = "item-info";
+
+        const nombre = document.createElement("h3");
+        nombre.textContent = producto.nombre;
+
+        const detalle = document.createElement("p");
+        detalle.textContent = "$" + producto.precio + " c/u";
+
+        const controles = document.createElement("div");
+        controles.className = "controles";
+
+        const menos = document.createElement("button");
+        menos.textContent = "−";
+        menos.onclick = () => cambiarCantidad(id, -1);
+
+        const numero = document.createElement("span");
+        numero.textContent = unidades;
+
+        const mas = document.createElement("button");
+        mas.textContent = "+";
+        mas.onclick = () => cambiarCantidad(id, 1);
+
+        controles.append(menos, numero, mas);
+        info.append(nombre, detalle, controles);
+
+        const derecha = document.createElement("div");
+        derecha.className = "item-derecha";
+
+        const importe = document.createElement("strong");
+        importe.textContent = "$" + precio;
+
+        const borrar = document.createElement("button");
+        borrar.textContent = "×";
+        borrar.setAttribute("aria-label", "Eliminar producto");
+        borrar.onclick = () => {
+          delete carrito[id];
+          actualizarCarrito();
+        };
+
+        derecha.append(importe, borrar);
+        tarjeta.append(foto, info, derecha);
+        lista.appendChild(tarjeta);
+      });
+
+      if (contador === 0) {
+        lista.innerHTML = '<p class="vacio">Tu carrito está vacío.</p>';
+      }
+
+      document.getElementById("subtotal").textContent = "$" + total;
+      document.getElementById("total").textContent = "$" + total;
+      document.getElementById("contador").textContent =
+        contador > 0 ? contador : "";
+
+      document.getElementById("hacer-pedido").disabled = contador === 0;
+    }
+
+    function cambiarCantidad(id, cambio) {
+      carrito[id] += cambio;
+      if (carrito[id] <= 0) delete carrito[id];
+      actualizarCarrito();
+    }
+
+    function mostrarPantalla(pantalla) {
+      document.querySelector(".bienvenida").hidden = pantalla !== "inicio";
+      document.querySelector(".bebidas").hidden = pantalla !== "inicio";
+
+      ["club", "qr", "carrito", "exito"].forEach(id => {
+        document.getElementById(id).hidden = id !== pantalla;
+      });
+
+      document.querySelectorAll(".nav-item").forEach(boton => {
+        boton.classList.toggle(
+          "activo",
+          boton.dataset.pantalla === pantalla
+        );
+      });
+
+      window.scrollTo(0, 0);
+    }
+
+    document.querySelectorAll(".nav-item").forEach(boton => {
+      boton.onclick = () => mostrarPantalla(boton.dataset.pantalla);
+    });
+
+    document.getElementById("hacer-pedido").onclick = () => {
+      if (Object.keys(carrito).length === 0) return;
+
+      Object.keys(carrito).forEach(id => delete carrito[id]);
+      actualizarCarrito();
+      mostrarPantalla("exito");
+    };
+
+    document.getElementById("volver-inicio").onclick = () => {
+      mostrarPantalla("inicio");
+    };
+
+    actualizarCarrito();
+  </script>
+
+</body>
+</html>
+
