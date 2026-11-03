@@ -1,0 +1,306 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: beige;
+}
+
+header {
+    background-color: beige;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    gap: 25px;
+}
+
+.titulo {
+    font-size: 36px;
+    letter-spacing: 5px;
+    color: rgb(64, 60, 60);
+    margin: 0;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#menu a {
+    color: rgb(64, 60, 60);
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-bottom: 6px;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #5c784c;
+    color: #5c784c;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    padding: 35px 5% 65px;
+    gap: 35px;
+}
+
+.texto-verde {
+    width: 45%;
+    background-color: #5c784c;
+    color: white;
+    padding: 65px 55px;
+    min-height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitulo {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.texto-verde h1 {
+    font-size: 54px;
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 0 0 25px;
+}
+
+.texto-verde p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.texto-verde a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    align-self: flex-start;
+}
+
+.imagen-principal {
+    width: 55%;
+}
+
+.foto {
+    width: 100%;
+    height: 590px;
+    object-fit: cover;
+    display: block;
+}
+
+#productos {
+    background-color: beige;
+    padding: 20px 5% 90px;
+}
+
+.ventanas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    background-color: white;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.producto img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-producto {
+    padding: 30px 20px 35px;
+    text-align: center;
+}
+
+.producto h3 {
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.producto a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid black;
+    padding-bottom: 7px;
+}
+
+.producto a:hover {
+    color: #5c784c;
+    border-color: #5c784c;
+}
+
+footer {
+    background-color: rgb(3, 99, 67);
+    color: beige;
+    padding: 55px 6%;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer h3 {
+    font-size: 21px;
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+#contacto {
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo {
+        margin-right: auto;
+    }
+
+    #menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        padding: 20px 5% 45px;
+        gap: 0;
+    }
+
+    .texto-verde {
+        width: 100%;
+        min-height: auto;
+        padding: 45px 35px;
+    }
+
+    .imagen-principal {
+        width: 100%;
+    }
+
+    .foto {
+        height: 430px;
+    }
+
+    .ventanas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 20px 5%;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    #menu {
+        gap: 12px;
+    }
+
+    #menu a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icons img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .texto-verde {
+        padding: 40px 25px;
+    }
+
+    .texto-verde h1 {
+        font-size: 40px;
+    }
+
+    .texto-verde p {
+        font-size: 15px;
+    }
+
+    .foto {
+        height: 350px;
+    }
+
+    #productos {
+        padding: 20px 5% 55px;
+    }
+
+    .ventanas {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .producto img {
+        height: 300px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #contacto {
+        text-align: left;
+    }
+}

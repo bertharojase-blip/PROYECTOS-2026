@@ -1,0 +1,329 @@
+
+.nosotros-inicio {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 6%;
+    background-color: beige;
+}
+
+.nosotros-imagen {
+    width: 50%;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+}
+
+.nosotros-texto {
+    width: 50%;
+    padding: 40px;
+}
+
+.nosotros-texto .subtitulo {
+    color: #5c784c;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.nosotros-texto h1 {
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #5c784c;
+    margin-bottom: 30px;
+}
+
+.nosotros-texto p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: rgb(64, 60, 60);
+}
+
+.nuestra-historia {
+    display: flex;
+    align-items: center;
+    background-color: #5c784c;
+    color: white;
+}
+
+.historia-texto {
+    width: 50%;
+    padding: 80px 7%;
+}
+
+.historia-texto h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.historia-texto p {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.historia-imagen {
+    width: 50%;
+}
+
+.historia-imagen img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+}
+
+.filosofia {
+    padding: 90px 6%;
+    background-color: beige;
+    text-align: center;
+}
+
+.filosofia .subtitulo {
+    color: #5c784c;
+}
+
+.filosofia h2 {
+    font-size: 45px;
+    font-weight: normal;
+    color: rgb(64, 60, 60);
+    margin-bottom: 50px;
+}
+
+.filosofia-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.filosofia-item {
+    background-color: white;
+    padding: 45px 30px;
+    text-align: center;
+}
+
+.filosofia-item h3 {
+    font-size: 18px;
+    color: #5c784c;
+    font-weight: normal;
+}
+
+.filosofia-item h4 {
+    font-size: 28px;
+    font-weight: normal;
+    color: rgb(64, 60, 60);
+    margin: 20px 0;
+}
+
+.filosofia-item p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgb(64, 60, 60);
+}
+
+@media (max-width: 700px) {
+
+    .nosotros-inicio {
+        flex-direction: column;
+        padding: 30px 5%;
+        gap: 20px;
+    }
+
+    .nosotros-imagen,
+    .nosotros-texto {
+        width: 100%;
+    }
+
+    .nosotros-imagen img {
+        height: 350px;
+    }
+
+    .nosotros-texto {
+        padding: 20px 10px;
+    }
+
+    .nosotros-texto h1 {
+        font-size: 38px;
+    }
+
+    .nuestra-historia {
+        flex-direction: column;
+    }
+
+    .historia-texto,
+    .historia-imagen {
+        width: 100%;
+    }
+
+    .historia-texto {
+        padding: 45px 7%;
+    }
+
+    .historia-texto h2 {
+        font-size: 35px;
+    }
+
+    .historia-imagen img {
+        height: 350px;
+    }
+
+    .filosofia {
+        padding: 55px 5%;
+    }
+
+    .filosofia h2 {
+        font-size: 36px;
+    }
+
+    .filosofia-columnas {
+        grid-template-columns: 1fr;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: beige;
+}
+
+header {
+    background-color: beige;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    gap: 25px;
+}
+
+.titulo {
+    font-size: 36px;
+    letter-spacing: 5px;
+    color: rgb(64, 60, 60);
+    margin: 0;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#menu a {
+    color: rgb(64, 60, 60);
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-bottom: 6px;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #5c784c;
+    color: #5c784c;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+footer {
+    background-color: rgb(3, 99, 67);
+    color: beige;
+    padding: 55px 6%;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer h3 {
+    font-size: 21px;
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+#contacto {
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo {
+        margin-right: auto;
+    }
+
+    #menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 20px 5%;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    #menu {
+        gap: 12px;
+    }
+
+    #menu a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icons img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #contacto {
+        text-align: left;
+    }
+}
