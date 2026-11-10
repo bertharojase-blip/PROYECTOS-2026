@@ -1,0 +1,380 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-family: 'DM Sans', sans-serif;
+    color: #403c3c;
+}
+
+header {
+    background-color: beige;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    border-bottom: 1px solid #d8dac8;
+}
+
+.logo h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #5c784c;
+}
+
+.logo span {
+    color: rgb(3, 99, 67);
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #403c3c;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.menu a:hover {
+    color: #5c784c;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icons img {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #5c784c;
+}
+
+.nosotros-portada {
+    padding: 95px 10% 85px;
+    text-align: center;
+}
+
+.nosotros-portada h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 78px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -4px;
+    color: #5c784c;
+    margin: 30px 0;
+}
+
+.portada-descripcion {
+    max-width: 620px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.nosotros-foto {
+    position: relative;
+    height: 550px;
+    margin: 0 6% 90px;
+    overflow: hidden;
+}
+
+.nosotros-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-texto {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: beige;
+    padding: 18px 25px;
+}
+
+.foto-texto p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #5c784c;
+}
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 90px 10%;
+    background-color: #5c784c;
+    color: beige;
+}
+
+.historia .etiqueta {
+    color: beige;
+}
+
+.historia h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -3px;
+    margin-top: 25px;
+}
+
+.historia-contenido {
+    padding-top: 30px;
+}
+
+.historia-contenido p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.filosofia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding: 100px 6%;
+}
+
+.filosofia-imagen img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    display: block;
+}
+
+.filosofia-contenido h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #5c784c;
+    margin: 20px 0 40px;
+}
+
+.valor {
+    display: flex;
+    gap: 30px;
+    padding: 25px 0;
+    border-top: 1px solid #c5c9b7;
+}
+
+.valor span {
+    font-size: 13px;
+    color: #5c784c;
+    font-weight: 700;
+}
+
+.valor h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.valor p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: rgb(3, 99, 67);
+    color: beige;
+    padding: 55px 6% 45px;
+}
+
+.footer-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.4);
+    padding-bottom: 25px;
+}
+
+.footer-superior p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.footer-logo {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer-logo h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 160px;
+    font-weight: 800;
+    letter-spacing: -12px;
+    line-height: 1.2;
+    color: beige;
+}
+
+.footer-informacion {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    border-top: 1px solid rgba(245, 245, 220, 0.4);
+    padding-top: 35px;
+}
+
+.footer-informacion h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-informacion p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+.footer-contacto {
+    text-align: right;
+}
+
+@media (max-width: 1000px) {
+
+    .nosotros-portada h1 {
+        font-size: 60px;
+    }
+
+    .historia {
+        gap: 40px;
+    }
+
+    .filosofia {
+        gap: 35px;
+    }
+
+    .footer-logo h2 {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icons img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .nosotros-portada {
+        padding: 65px 6%;
+    }
+
+    .nosotros-portada h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .portada-descripcion {
+        font-size: 15px;
+    }
+
+    .nosotros-foto {
+        height: 350px;
+        margin: 0 5% 55px;
+    }
+
+    .historia {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 20px;
+    }
+
+    .historia h2 {
+        font-size: 40px;
+    }
+
+    .historia-contenido {
+        padding-top: 10px;
+    }
+
+    .filosofia {
+        grid-template-columns: 1fr;
+        padding: 65px 5%;
+    }
+
+    .filosofia-imagen img {
+        height: 380px;
+    }
+
+    .filosofia-contenido h2 {
+        font-size: 38px;
+    }
+
+    .footer-superior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-logo h2 {
+        font-size: 75px;
+        letter-spacing: -5px;
+    }
+
+    .footer-informacion {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-contacto {
+        text-align: left;
+    }
+}

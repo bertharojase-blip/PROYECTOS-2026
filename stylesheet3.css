@@ -1,0 +1,402 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-family: 'DM Sans', sans-serif;
+    color: #403c3c;
+}
+
+header {
+    background-color: beige;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    border-bottom: 1px solid #d8dac8;
+}
+
+.logo h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #5c784c;
+}
+
+.logo span {
+    color: rgb(3, 99, 67);
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #403c3c;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.menu a:hover {
+    color: #5c784c;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icons img {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #5c784c;
+}
+
+.portada-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    padding: 75px 6%;
+}
+
+.portada-texto {
+    padding: 30px 0;
+}
+
+.portada-texto h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -4px;
+    color: #5c784c;
+    margin: 30px 0;
+}
+
+.descripcion {
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 430px;
+}
+
+.portada-imagen img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    display: block;
+}
+
+.catalogo {
+    padding: 85px 6% 110px;
+    background-color: #f5f5dc;
+}
+
+.catalogo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.catalogo-encabezado h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #5c784c;
+    margin-top: 20px;
+}
+
+.numero-productos {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #5c784c;
+}
+
+.filtros {
+    display: flex;
+    gap: 35px;
+    border-top: 1px solid #c5c9b7;
+    border-bottom: 1px solid #c5c9b7;
+    padding: 22px 0;
+    margin-bottom: 45px;
+}
+
+.filtros span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #403c3c;
+}
+
+.filtros span:first-child {
+    color: #5c784c;
+    border-bottom: 1px solid #5c784c;
+    padding-bottom: 5px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 25px;
+}
+
+.producto {
+    min-width: 0;
+}
+
+.producto-imagen {
+    background-color: #e5e8d9;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+    padding: 20px 5px;
+}
+
+.tipo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #5c784c;
+    margin-bottom: 12px;
+}
+
+.producto-info h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.detalle {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 17px;
+    font-weight: 700;
+    color: #5c784c;
+}
+
+.frase-final {
+    background-color: #5c784c;
+    color: beige;
+    text-align: center;
+    padding: 95px 20px;
+}
+
+.frase-final p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.frase-final h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+footer {
+    background-color: rgb(3, 99, 67);
+    color: beige;
+    padding: 55px 6% 45px;
+}
+
+.footer-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.4);
+    padding-bottom: 25px;
+}
+
+.footer-superior p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.footer-logo {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer-logo h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 160px;
+    font-weight: 800;
+    letter-spacing: -12px;
+    line-height: 1.2;
+    color: beige;
+}
+
+.footer-informacion {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    border-top: 1px solid rgba(245, 245, 220, 0.4);
+    padding-top: 35px;
+}
+
+.footer-informacion h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.footer-informacion p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+.footer-contacto {
+    text-align: right;
+}
+
+@media (max-width: 1000px) {
+
+    .portada-texto h1 {
+        font-size: 50px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-logo h2 {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icons img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .portada-productos {
+        grid-template-columns: 1fr;
+        padding: 55px 5%;
+        gap: 30px;
+    }
+
+    .portada-texto h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .portada-imagen img {
+        height: 350px;
+    }
+
+    .catalogo {
+        padding: 65px 5%;
+    }
+
+    .catalogo-encabezado h2 {
+        font-size: 36px;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .producto-imagen img {
+        height: 380px;
+    }
+
+    .frase-final {
+        padding: 70px 20px;
+    }
+
+    .frase-final h2 {
+        font-size: 38px;
+    }
+
+    .footer-superior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-logo h2 {
+        font-size: 75px;
+        letter-spacing: -5px;
+    }
+
+    .footer-informacion {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-contacto {
+        text-align: left;
+    }
+}
